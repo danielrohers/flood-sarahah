@@ -6,7 +6,7 @@
 * Run the script (*`flood()`*)
 
 ```js
-function flood() {
+function flood(size) {
   function getRandomText() {
     var text = "";
     var s = "Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não altera o pão duris. Mé faiz elementum girarzis, nisi eros vermeio. Si num tem leite então bota uma pinga aí cumpadi! Viva Forevis aptent taciti sociosqu ad litora torquent. Aenean aliquam molestie leo, vitae iaculis nisl. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Casamentiss faiz malandris se pirulitá. Atirei o pau no gatis, per gatis num morreus. Cevadis im ampola pa arma uma pindureta. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Paisis, filhis, espiritis santis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Interagi no mé, cursus quis, vehicula ac nisi. Quem num gosta di mim que vai caçá sua turmis! Leite de capivaris, leite de mula manquis sem cabeça.";
@@ -32,7 +32,8 @@ function flood() {
     return text.charAt(0).toUpperCase() + text.slice(1);
   }
 
-  for (var i = 0; i < 99999; i++) {
+  size = Number(size) || 99999;
+  for (var i = 0; i < size; i++) {
     var text = getRandomText();
     var userId = $('#RecipientId').val();
     console.log(i);
