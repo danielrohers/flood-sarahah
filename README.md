@@ -3,7 +3,7 @@
 * Open the URL of the desired user
 * Open browser inspection
 * Paste the script
-* Run the script (**`flood()`**)
+* Run the script (*`flood()`*)
 
 ```js
 function flood() {
