@@ -33,7 +33,7 @@ function flood(size) {
   }
 
   size = Number(size) || 99999;
-  var token = $('script:last').text().replace(/ /g, '').replace(/\n/g, '').replace(/.*value="/, '').replace(/".*/, '');
+  var token = SendMessage.toString().replace(/ /g, '').replace(/\n/g, '').replace(/.*value="/, '').replace(/".*/, '');
   for (var i = 0; i < size; i++) {
     var text = getRandomText();
     var userId = $('#RecipientId').val();
